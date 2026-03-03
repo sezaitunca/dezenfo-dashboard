@@ -1,4 +1,5 @@
 import { useState, useMemo } from "react";
+import tubitakLogo from "./assets/tubitak.png";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, PieChart, Pie, Cell, LineChart, Line, RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Legend, CartesianGrid } from "recharts";
 
 const data = [
@@ -573,9 +574,36 @@ export default function Dashboard() {
         )}
       </div>
 
-      <div style={{padding:"12px 20px",borderTop:`1px solid ${CARD_BORDER}`,textAlign:"center",fontSize:11,color:TEXT_SECONDARY}}>
-        Veri Kaynağı: T.C. Cumhurbaşkanlığı İletişim Başkanlığı — Dezenformasyon Bülteni 2025 Almanak 1. Cilt (Sayı 158-175) | Analiz: {data.length} iddia kodlanmıştır
-      </div>
+      <div
+  style={{
+    padding: "16px 20px",
+    borderTop: `1px solid ${CARD_BORDER}`,
+    textAlign: "center",
+    fontSize: 11,
+    color: TEXT_SECONDARY,
+  }}
+>
+  <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10 }}>
+    <img
+      src={tubitakLogo}
+      alt="TÜBİTAK"
+      style={{ height: 52, width: "auto", opacity: 0.95 }}
+    />
+
+    <div style={{ fontSize: 12, color: TEXT_PRIMARY, fontWeight: 600 }}>
+      TÜBİTAK 3005 Projesi Çalışmaları
+    </div>
+
+    <div style={{ fontSize: 11, color: TEXT_SECONDARY }}>
+      Proje No: <span style={{ color: TEXT_PRIMARY, fontWeight: 600 }}>125R089</span>
+    </div>
+
+    <div style={{ marginTop: 6 }}>
+      Veri Kaynağı: T.C. Cumhurbaşkanlığı İletişim Başkanlığı — Dezenformasyon Bülteni 2025 Almanak 1. Cilt (Sayı 158-175)
+      {" "} | Analiz: {data.length} iddia kodlanmıştır
+    </div>
+  </div>
+</div>
     </div>
   );
 }

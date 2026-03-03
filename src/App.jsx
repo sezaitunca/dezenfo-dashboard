@@ -600,7 +600,7 @@ export default function Dashboard() {
 
     <div style={{ marginTop: 6 }}>
       Veri Kaynağı: T.C. Cumhurbaşkanlığı İletişim Başkanlığı — Dezenformasyon Bülteni 2025 Almanak 1. Cilt (Sayı 158-175)
-      {" "} | Analiz: {data.length} iddia kodlanmıştır
+      {" "} | Analiz: {data.length} iddia kodlanmıştır.
     </div>
   </div>
 </div>

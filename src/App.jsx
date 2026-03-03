@@ -584,56 +584,63 @@ export default function Dashboard() {
     color: TEXT_SECONDARY,
   }}
 >
-  <div
+  {/* FOOTER */}
+<div
   style={{
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    gap: 12,
-    textAlign: "center"
+    padding: "16px 20px",
+    borderTop: `1px solid ${CARD_BORDER}`,
+    textAlign: "center",
+    fontSize: 11,
+    color: TEXT_SECONDARY,
   }}
 >
-  
-  {/* LOGO SATIRI */}
   <div
     style={{
       display: "flex",
+      flexDirection: "column",
       alignItems: "center",
-      justifyContent: "center",
-      gap: 20,
-      flexWrap: "wrap"
+      gap: 12,
     }}
   >
-    <img
-      src={tubitakLogo}
-      alt="TÜBİTAK"
-      style={{ height: 52, width: "auto", opacity: 0.95 }}
-    />
+    {/* LOGO SATIRI */}
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: 20,
+        flexWrap: "wrap",
+      }}
+    >
+      <img
+        src={tubitakLogo}
+        alt="TÜBİTAK"
+        style={{ height: 52, width: "auto", opacity: 0.95 }}
+      />
 
-    <img
-      src={alanyaLogo}
-      alt="Alanya Üniversitesi"
-      style={{ height: 52, width: "auto", opacity: 0.95 }}
-    />
-  </div>
-
-  <div style={{ fontSize: 12, color: TEXT_PRIMARY, fontWeight: 600 }}>
-    TÜBİTAK 3005 Projesi Çalışmaları
-  </div>
-
-  <div style={{ fontSize: 11, color: TEXT_SECONDARY }}>
-    Proje No: <span style={{ color: TEXT_PRIMARY, fontWeight: 600 }}>125R089</span>
-  </div>
-
-  <div style={{ marginTop: 6 }}>
-    Veri Kaynağı: T.C. Cumhurbaşkanlığı İletişim Başkanlığı — Dezenformasyon Bülteni 2025 Almanak 1. Cilt (Sayı 158-175)
-    {" "} | Analiz: {data.length} iddia kodlanmıştır.
-  </div>
-
-</div>
-  </div>
-</div>
+      <img
+        src={alanyaLogo}
+        alt="Alanya Üniversitesi"
+        style={{ height: 52, width: "auto", opacity: 0.95 }}
+      />
     </div>
-  );
-}
 
+    <div style={{ fontSize: 12, color: TEXT_PRIMARY, fontWeight: 600 }}>
+      TÜBİTAK 3005 Projesi Çalışmaları
+    </div>
+
+    <div style={{ fontSize: 11 }}>
+      Proje No:{" "}
+      <span style={{ color: TEXT_PRIMARY, fontWeight: 600 }}>
+        125R089
+      </span>
+    </div>
+
+    <div style={{ marginTop: 6, maxWidth: 900, lineHeight: 1.6 }}>
+      Veri Kaynağı: T.C. Cumhurbaşkanlığı İletişim Başkanlığı —
+      Dezenformasyon Bülteni 2025 Almanak 1. Cilt (Sayı 158-175)
+      <span style={{ margin: "0 6px" }}>|</span>
+      Analiz: {data.length} iddia kodlanmıştır.
+    </div>
+  </div>
+</div>
